@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Jumaidil Rahma Ibrahim  — Desainer & Pengembang Web</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #18181b;
+      --muted: #71717a;
+      --border: #e4e4e7;
+      --accent: #18181b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 32px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-left: 20px;
+      transition: color 0.15s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 80px 0 64px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.88;
+    }
+
+    section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="#" class="logo">ADIL.dev</a>
+      <nav>
+        <a href="#proyek">Proyek</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" style="border-top: none;">
+        <h1>Membangun situs web yang ringan, jelas, dan fungsional.</h1>
+        <p>
+          GUA Jumaidil, pengembang web yang fokus pada antarmuka bersih, performa cepat,
+          dan pengalaman membaca yang nyaman tanpa elemen berlebihan.
+        </p>
+        <a href="#kontak" class="btn">Hubungi Saya</a>
+      </section>
+
+      <section id="proyek">
+        <h2>Proyek Pilihan</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Catatan Harian</h3>
+            <p>Aplikasi catatan minimalis berbasis browser dengan penyimpanan lokal instan.</p>
+          </div>
+          <div class="card">
+            <h3>Kalkulator Split Bill</h3>
+            <p>Alat pembagi tagihan makan bersama yang cepat dan mudah dipakai di ponsel.</p>
+          </div>
+          <div class="card">
+            <h3>Blog Teknis</h3>
+            <p>Ruang tulisan ringkas seputar HTML, CSS modern, dan aksesibilitas web.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak">
+        <h2>Kontak</h2>
+        <div class="contact-box">
+          <div>
+            <strong>Tertarik bekerja sama?</strong>
+            <p>Kirim pesan singkat dan ceritakan ide proyek Anda.</p>
+          </div>
+          <a href="mailto:halo@contoh.com" class="btn">Kirim Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="tahun"></span> Adil.dev — Dibuat dengan HTML &amp; CSS murni.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("tahun").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
